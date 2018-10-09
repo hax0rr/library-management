@@ -1,0 +1,23 @@
+C:\F I L E S\C#.NET\LibraryApplication\LibraryApplication\bin\Debug\LibraryApplication.exe.config
+C:\F I L E S\C#.NET\LibraryApplication\LibraryApplication\bin\Debug\LibraryApplication.exe
+C:\F I L E S\C#.NET\LibraryApplication\LibraryApplication\bin\Debug\LibraryApplication.pdb
+C:\F I L E S\C#.NET\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.csprojAssemblyReference.cache
+C:\F I L E S\C#.NET\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.login.resources
+C:\F I L E S\C#.NET\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.Properties.Resources.resources
+C:\F I L E S\C#.NET\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.csproj.GenerateResource.cache
+C:\F I L E S\C#.NET\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.csproj.CoreCompileInputs.cache
+C:\F I L E S\C#.NET\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.exe
+C:\F I L E S\C#.NET\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.pdb
+C:\F I L E S\C#.NET\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.mdi_user.resources
+C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\bin\Debug\LibraryApplication.exe.config
+C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\bin\Debug\LibraryApplication.exe
+C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\bin\Debug\LibraryApplication.pdb
+C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.csprojAssemblyReference.cache
+C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.add_books.resources
+C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.login.resources
+C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.mdi_user.resources
+C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.Properties.Resources.resources
+C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.csproj.GenerateResource.cache
+C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.csproj.CoreCompileInputs.cache
+C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.exe
+C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.pdb
