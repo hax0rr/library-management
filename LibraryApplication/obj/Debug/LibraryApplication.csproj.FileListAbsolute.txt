@@ -21,3 +21,4 @@ C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApp
 C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.csproj.CoreCompileInputs.cache
 C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.exe
 C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.pdb
+C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.view_books.resources

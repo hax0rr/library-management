@@ -21,24 +21,30 @@ namespace LibraryApplication
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			SqlCommand cmd = conn.CreateCommand();
-			cmd.CommandType = CommandType.Text;
-			cmd.CommandText = "select * from librarian where username='"+textBox1.Text +"' and password='"+textBox2.Text +"'";
-			cmd.ExecuteNonQuery();
-			DataTable dt = new DataTable();
-			SqlDataAdapter da = new SqlDataAdapter(cmd);
-			da.Fill(dt);
-			count = Convert.ToInt32(dt.Rows.Count.ToString());
-			if (count == 0)
+			try {
+				SqlCommand cmd = conn.CreateCommand();
+				cmd.CommandType = CommandType.Text;
+				cmd.CommandText = "select * from librarian where username='" + textBox1.Text + "' and password='" + textBox2.Text + "'";
+				cmd.ExecuteNonQuery();
+				DataTable dt = new DataTable();
+				SqlDataAdapter da = new SqlDataAdapter(cmd);
+				da.Fill(dt);
+				count = Convert.ToInt32(dt.Rows.Count.ToString());
+				if (count == 0)
+				{
+					MessageBox.Show("Username and password does not match!!");
+				}
+				else
+				{
+					this.Hide();
+					mdi_user mu = new mdi_user();
+					mu.Show();
+				}
+			}catch(Exception ex)
 			{
-				MessageBox.Show("Username and password does not match!!");
+				MessageBox.Show(ex.Message);
 			}
-			else
-			{
-				this.Hide();
-				mdi_user mu = new mdi_user();
-				mu.Show();
-			}
+			
 		}
 
 		private void login_Load(object sender, EventArgs e)

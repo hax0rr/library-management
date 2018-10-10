@@ -35,6 +35,7 @@
 			this.statusStrip = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+			this.viewBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip.SuspendLayout();
 			this.statusStrip.SuspendLayout();
 			this.SuspendLayout();
@@ -52,7 +53,8 @@
 			// booksToolStripMenuItem
 			// 
 			this.booksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addNewBooksToolStripMenuItem});
+            this.addNewBooksToolStripMenuItem,
+            this.viewBooksToolStripMenuItem});
 			this.booksToolStripMenuItem.Name = "booksToolStripMenuItem";
 			this.booksToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
 			this.booksToolStripMenuItem.Text = "Books";
@@ -79,6 +81,13 @@
 			this.toolStripStatusLabel.Name = "toolStripStatusLabel";
 			this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
 			this.toolStripStatusLabel.Text = "Status";
+			// 
+			// viewBooksToolStripMenuItem
+			// 
+			this.viewBooksToolStripMenuItem.Name = "viewBooksToolStripMenuItem";
+			this.viewBooksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.viewBooksToolStripMenuItem.Text = "View Books";
+			this.viewBooksToolStripMenuItem.Click += new System.EventHandler(this.viewBooksToolStripMenuItem_Click);
 			// 
 			// mdi_user
 			// 
@@ -109,6 +118,7 @@
 		private System.Windows.Forms.ToolTip toolTip;
 		private System.Windows.Forms.ToolStripMenuItem booksToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem addNewBooksToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem viewBooksToolStripMenuItem;
 	}
 }
 

@@ -26,15 +26,21 @@ namespace LibraryApplication
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			conn.Open();
-			SqlCommand cmd = conn.CreateCommand();
-			cmd.CommandType = CommandType.Text;
-			cmd.CommandText = "insert into books_info values('"+textBox1.Text +"','"+ textBox2.Text + "','"+ textBox3.Text  + "','"+ dateTimePicker1.Text + "',"+ textBox5.Text  + ","+ textBox6.Text  + ")";
-			cmd.ExecuteNonQuery();
-			conn.Close();
-			textBox1.Text = ""; textBox2.Text = ""; textBox3.Text = ""; textBox5.Text = ""; textBox6.Text = "";
+			try {
+				conn.Open();
+				SqlCommand cmd = conn.CreateCommand();
+				cmd.CommandType = CommandType.Text;
+				cmd.CommandText = "insert into books_info values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + dateTimePicker1.Text + "'," + textBox5.Text + "," + textBox6.Text + ")";
+				cmd.ExecuteNonQuery();
+				conn.Close();
+				textBox1.Text = ""; textBox2.Text = ""; textBox3.Text = ""; textBox5.Text = ""; textBox6.Text = "";
 
-			MessageBox.Show("Books Added!!");
+				MessageBox.Show("Books Added!!");
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
 		}
 	}
 }
