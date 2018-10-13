@@ -12,10 +12,12 @@ using System.IO;
 
 namespace LibraryApplication
 {
+
 	public partial class add_student_info : Form
 	{
 		SqlConnection conn = new SqlConnection(@"Data Source=HAX0RR\SQLEXPRESS;Initial Catalog=library_management;Integrated Security=True;Pooling=False");
 		string pwd;
+		DialogResult result;
 		string wanted_path;
 		public add_student_info()
 		{
@@ -24,7 +26,11 @@ namespace LibraryApplication
 
 		private void add_student_info_Load(object sender, EventArgs e)
 		{
-
+			if (conn.State == ConnectionState.Open)
+			{
+				conn.Close();
+			}
+			conn.Open();
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -44,18 +50,38 @@ namespace LibraryApplication
 		{
 			try
 			{
-				String img_path;
-				File.Copy(openFileDialog1.FileName, wanted_path + "\\student_images\\" +pwd + ".jpg");
-				img_path = "student_images\\" + pwd + ".jpg";
-				conn.Open();
-				SqlCommand cmd = conn.CreateCommand();
-				cmd.CommandType = CommandType.Text; 
-				cmd.CommandText = "insert into student_info values('" +textBox1.Text + "','" +img_path.ToString() + "','" +textBox3.Text + "','" +textBox4.Text + "','" +textBox5.Text + "','" +textBox6.Text + "','" +textBox7.Text + "')";
-				cmd.ExecuteNonQuery();
-				conn.Close();
-				//textBox1.Text = ""; textBox2.Text = ""; textBox3.Text = ""; textBox5.Text = ""; textBox6.Text = "";
+				
+				if (textBox3.Text == "")
+				{
+					MessageBox.Show("Enrollment Number is necessary!!");
+				}
+				else if (textBox1.Text == "")
+				{
+					MessageBox.Show("Student Name is necessary!!");
+				}
+				else if (pictureBox1.Image == null)
+				{
+					MessageBox.Show("Please insert a picture ");
+				}
+				else {
+					
+						String img_path;
+						File.Copy(openFileDialog1.FileName, wanted_path + "\\student_images\\" + pwd + ".jpg");
+						img_path = "student_images\\" + pwd + ".jpg";
 
-				MessageBox.Show("Student Record Added!!");
+						SqlCommand cmd = conn.CreateCommand();
+						cmd.CommandType = CommandType.Text;
+						cmd.CommandText = "insert into student_info values('" + textBox1.Text + "','" + img_path.ToString() + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "')";
+						cmd.ExecuteNonQuery();
+						textBox1.Text = ""; textBox3.Text = ""; textBox5.Text = ""; textBox6.Text = "";
+						textBox4.Text = ""; ; textBox7.Text = "";
+
+						//textBox1.Text = ""; textBox2.Text = ""; textBox3.Text = ""; textBox5.Text = ""; textBox6.Text = "";
+						MessageBox.Show("Student Record Added!!");
+						this.Close();
+					
+				}
+				
 			}
 			catch (Exception ex)
 			{

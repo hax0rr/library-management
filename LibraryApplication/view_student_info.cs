@@ -25,8 +25,8 @@ namespace LibraryApplication
 
 		private void view_student_info_Load(object sender, EventArgs e)
 		{
-			
-			if(conn.State == ConnectionState.Open)
+
+			if (conn.State == ConnectionState.Open)
 			{
 				conn.Close();
 			}
@@ -60,10 +60,11 @@ namespace LibraryApplication
 
 			foreach (DataRow dr in dt.Rows)
 			{
-				img = new Bitmap(@"..\..\" + dr["student_image"].ToString());
-				dataGridView1.Rows[i].Cells[8].Value = img;
-				dataGridView1.Rows[i].Height = 100;
-				i = i + 1;
+					img = new Bitmap(@"..\..\" + dr["student_image"].ToString());
+					dataGridView1.Rows[i].Cells[8].Value = img;
+					dataGridView1.Rows[i].Height = 100;
+
+					i = i + 1;
 			}
 		}
 
@@ -77,7 +78,7 @@ namespace LibraryApplication
 				dataGridView1.Refresh();
 				SqlCommand cmd = conn.CreateCommand();
 				cmd.CommandType = CommandType.Text;
-				cmd.CommandText = "select * from student_info where student_name like('%"+textBox1.Text +"%')";
+				cmd.CommandText = "select * from student_info where student_name like('%" + textBox1.Text + "%')";
 				cmd.ExecuteNonQuery();
 				DataTable dt = new DataTable();
 				SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -100,7 +101,7 @@ namespace LibraryApplication
 					i = i + 1;
 				}
 			}
-			catch(Exception ex)
+			catch (Exception ex)
 			{
 				MessageBox.Show(ex.Message);
 			}
@@ -118,58 +119,87 @@ namespace LibraryApplication
 
 		private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
-			int i;
-			i = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
 
-			SqlCommand cmd = conn.CreateCommand();
-			cmd.CommandType = CommandType.Text;
-			cmd.CommandText = "select * from student_info where id="+i+"";
-			cmd.ExecuteNonQuery();
-			DataTable dt = new DataTable();
-			SqlDataAdapter da = new SqlDataAdapter(cmd);
-			da.Fill(dt);
-			foreach (DataRow dr in dt.Rows)
+			if (conn.State == ConnectionState.Open)
 			{
-				student_name.Text = dr["student_name"].ToString();
-				student_enrollment_no.Text = dr["student_enrollment_no"].ToString();
-				student_dept.Text= dr["student_department"].ToString();
-				student_sem.Text = dr["student_sem"].ToString();
-				student_contact.Text = dr["student_contact"].ToString();
-				student_email.Text = dr["student_email"].ToString();
+				conn.Close();
 			}
-			conn.Close();
+			conn.Open();
+			try {
+				int i;
+				i = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
+
+				SqlCommand cmd = conn.CreateCommand();
+				cmd.CommandType = CommandType.Text;
+				cmd.CommandText = "select * from student_info where id=" + i + "";
+				cmd.ExecuteNonQuery();
+				DataTable dt = new DataTable();
+				SqlDataAdapter da = new SqlDataAdapter(cmd);
+				da.Fill(dt);
+				foreach (DataRow dr in dt.Rows)
+				{
+					student_name.Text = dr["student_name"].ToString();
+					student_enrollment_no.Text = dr["student_enrollment_no"].ToString();
+					student_dept.Text = dr["student_department"].ToString();
+					student_sem.Text = dr["student_sem"].ToString();
+					student_contact.Text = dr["student_contact"].ToString();
+					student_email.Text = dr["student_email"].ToString();
+				}
+			}catch(Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+			
+			
 
 		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			if (result == DialogResult.OK)
+			if (conn.State == ConnectionState.Open)
 			{
-				int i;
-				i = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
+				conn.Close();
+			}
+			conn.Open();
+			try {
 				String img_path;
-				File.Copy(openFileDialog1.FileName, wanted_path + "\\student_images\\" + pwd + ".jpg");
-				img_path = "student_images\\" + pwd + ".jpg";
+				if (result == DialogResult.OK)
+				{
+					int i;
+					i = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
+					
+					File.Copy(openFileDialog1.FileName, wanted_path + "\\student_images\\" + pwd + ".jpg");
+					img_path = "student_images\\" + pwd + ".jpg";
 
-				SqlCommand cmd = conn.CreateCommand();
-				cmd.CommandType = CommandType.Text;
-				cmd.CommandText = "update student_info set student_name='"+student_name.Text +"', student_image='" +img_path.ToString() + "', student_enrollment_no='" + student_enrollment_no.Text + "',student_department='" + student_dept.Text + "',student_sem='" + student_sem.Text + "',student_contact='" + student_contact.Text + "',student_email='" + student_email.Text + "' where id='"+i +"'";
-				cmd.ExecuteNonQuery();
-				fill_grid();
-				MessageBox.Show("Record Updated Successfully!");
+					SqlCommand cmd = conn.CreateCommand();
+					cmd.CommandType = CommandType.Text;
+					cmd.CommandText = "update student_info set student_name='" + student_name.Text + "', student_image='" + img_path.ToString() + "', student_enrollment_no='" + student_enrollment_no.Text + "',student_department='" + student_dept.Text + "',student_sem='" + student_sem.Text + "',student_contact='" + student_contact.Text + "',student_email='" + student_email.Text + "' where id='" + i + "'";
+					cmd.ExecuteNonQuery();
+					fill_grid();
+					MessageBox.Show("Record Updated Successfully!");
+					img_path = "";
+					this.Close();
+				}
+				else
+				{
+					img_path = "";
+					int i;
+					i = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
+					SqlCommand cmd = conn.CreateCommand();
+					cmd.CommandType = CommandType.Text;
+					cmd.CommandText = "update student_info set student_name='" + student_name.Text + "', student_enrollment_no='" + student_enrollment_no.Text + "',student_department='" + student_dept.Text + "',student_sem='" + student_sem.Text + "',student_contact='" + student_contact.Text + "',student_email='" + student_email.Text + "' where id='" + i + "'";
+					cmd.ExecuteNonQuery();
+					fill_grid();
+					MessageBox.Show("Record Updated Successfully!");
+					this.Close();
+				}
 			}
-			else if(result == DialogResult.Cancel)
+			catch (Exception ex)
 			{
-
-				int i;
-				i = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
-				SqlCommand cmd = conn.CreateCommand();
-				cmd.CommandType = CommandType.Text;
-				cmd.CommandText = "update student_info set student_name='" + student_name.Text + "', student_enrollment_no='" + student_enrollment_no.Text + "',student_department='" + student_dept.Text + "',student_sem='" + student_sem.Text + "',student_contact='" + student_contact.Text + "',student_email='" + student_email.Text + "' where id='" + i + "'";
-				cmd.ExecuteNonQuery();
-				fill_grid();
-				MessageBox.Show("Record Updated Successfully!");
+				MessageBox.Show(ex.Message);
 			}
+			
+			
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -178,7 +208,6 @@ namespace LibraryApplication
 			wanted_path = Path.GetDirectoryName(Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()));
 			result = openFileDialog1.ShowDialog();
 			openFileDialog1.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg| GIF Files (*.gif)|*.gif";
-			
 		}
 	}
 }

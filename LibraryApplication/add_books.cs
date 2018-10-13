@@ -23,24 +23,57 @@ namespace LibraryApplication
 		{
 
 		}
+		public bool isNumber(String s) {
+			for (int i = 0; i < s.Length; i++)
+				if (char.IsDigit(s[i]) == false)
+					return false;
 
+			return true;
+		}
 		private void button1_Click(object sender, EventArgs e)
 		{
 			try {
-				conn.Open();
-				SqlCommand cmd = conn.CreateCommand();
-				cmd.CommandType = CommandType.Text;
-				cmd.CommandText = "insert into books_info values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + dateTimePicker1.Text + "'," + textBox5.Text + "," + textBox6.Text + ")";
-				cmd.ExecuteNonQuery();
-				conn.Close();
-				textBox1.Text = ""; textBox2.Text = ""; textBox3.Text = ""; textBox5.Text = ""; textBox6.Text = "";
+				if (textBox1.Text !="" && textBox2.Text != "" && textBox3.Text != "" && textBox5.Text != "" && textBox6.Text != "") {
+					if(!isNumber(textBox5.Text)) {
+						MessageBox.Show("Invalid Price");
+					}
+					else if (!isNumber(textBox6.Text))
+					{
+						MessageBox.Show("Invalid Quantity");
+					}
+					else {
+						SqlCommand cmd = conn.CreateCommand();
+						cmd.CommandType = CommandType.Text;
+						cmd.CommandText = "insert into books_info values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + dateTimePicker1.Text + "'," + textBox5.Text + "," + textBox6.Text + "," + textBox6.Text + ")";
+						cmd.ExecuteNonQuery();
 
-				MessageBox.Show("Books Added!!");
+						textBox1.Text = ""; textBox2.Text = ""; textBox3.Text = ""; textBox5.Text = ""; textBox6.Text = "";
+
+						MessageBox.Show("Books Added!!");
+						this.Close();
+					}
+					
+				}
+				else
+				{
+					MessageBox.Show("Fill all the details!");
+				}
+				
 			}
 			catch (Exception ex)
 			{
 				MessageBox.Show(ex.Message);
 			}
+			
+		}
+
+		private void add_books_Load(object sender, EventArgs e)
+		{
+			if (conn.State == ConnectionState.Open)
+			{
+				conn.Close();
+			}
+			conn.Open();
 		}
 	}
 }

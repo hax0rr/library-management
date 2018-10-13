@@ -21,6 +21,11 @@ namespace LibraryApplication
 
 		private void view_books_Load(object sender, EventArgs e)
 		{
+			if (conn.State == ConnectionState.Open)
+			{
+				conn.Close();
+			}
+			conn.Open();
 			disp_books();
 
 
@@ -31,7 +36,7 @@ namespace LibraryApplication
 			int i = 0;
 			try
 			{
-				conn.Open();
+				
 				SqlCommand cmd = conn.CreateCommand();
 				cmd.CommandType = CommandType.Text;
 				cmd.CommandText = "select * from books_info where book_name like('%"+textBox1.Text+"%')";
@@ -41,7 +46,7 @@ namespace LibraryApplication
 				da.Fill(dt);
 				i = Convert.ToInt32(dt.Rows.Count.ToString());
 				dataGridView1.DataSource = dt;
-				conn.Close();
+				
 				if(i == 0)
 				{
 					MessageBox.Show("No Books Found!");
@@ -58,7 +63,6 @@ namespace LibraryApplication
 			//int i = 0;
 			try
 			{
-				conn.Open();
 				SqlCommand cmd = conn.CreateCommand();
 				cmd.CommandType = CommandType.Text;
 				cmd.CommandText = "select * from books_info where book_name like('%" + textBox1.Text + "%')";
@@ -68,7 +72,7 @@ namespace LibraryApplication
 				da.Fill(dt);
 				//i = Convert.ToInt32(dt.Rows.Count.ToString());
 				dataGridView1.DataSource = dt;
-				conn.Close();
+				
 				
 			}
 			catch (Exception ex)
@@ -97,7 +101,7 @@ namespace LibraryApplication
 			int i = 0;
 			try
 			{
-				conn.Open();
+				
 				SqlCommand cmd = conn.CreateCommand();
 				cmd.CommandType = CommandType.Text;
 				cmd.CommandText = "select * from books_info where book_author_name like('%" + textBox2.Text + "%')";
@@ -107,7 +111,7 @@ namespace LibraryApplication
 				da.Fill(dt);
 				i = Convert.ToInt32(dt.Rows.Count.ToString());
 				dataGridView1.DataSource = dt;
-				conn.Close();
+			
 				if (i == 0)
 				{
 					MessageBox.Show("No Books Found!");
@@ -124,7 +128,7 @@ namespace LibraryApplication
 			//int i = 0;
 			try
 			{
-				conn.Open();
+				
 				SqlCommand cmd = conn.CreateCommand();
 				cmd.CommandType = CommandType.Text;
 				cmd.CommandText = "select * from books_info where book_author_name like('%" + textBox2.Text + "%')";
@@ -134,7 +138,7 @@ namespace LibraryApplication
 				da.Fill(dt);
 				//i = Convert.ToInt32(dt.Rows.Count.ToString());
 				dataGridView1.DataSource = dt;
-				conn.Close();
+				
 				
 			}
 			catch (Exception ex)
@@ -156,7 +160,7 @@ namespace LibraryApplication
 			//MessageBox.Show(i.ToString());
 			try
 			{
-				conn.Open();
+				
 				SqlCommand cmd = conn.CreateCommand();
 				cmd.CommandType = CommandType.Text;
 				cmd.CommandText = "select * from books_info where id="+i+"";
@@ -173,7 +177,7 @@ namespace LibraryApplication
 					bookprice.Text = dr["book_price"].ToString();
 					bookquantity.Text = dr["book_quantity"].ToString();
 				}
-				conn.Close();
+				
 			}
 			catch (Exception ex)
 			{
@@ -187,12 +191,12 @@ namespace LibraryApplication
 			i = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
 			try
 			{
-				conn.Open();
+				
 				SqlCommand cmd = conn.CreateCommand();
 				cmd.CommandType = CommandType.Text;
 				cmd.CommandText = "update books_info set book_name = '"+bookname.Text + "', book_author_name = '"+authorname.Text +"', book_publication_name='"+publicationname.Text +"', book_purchase_date='"+purchasedate.Value +"', book_price='"+bookprice.Text +"', book_quantity='"+bookquantity.Text +"' where id='"+i +"'";
 				cmd.ExecuteNonQuery();
-				conn.Close();
+				
 				disp_books();
 				MessageBox.Show("Book Details Updated Successfully!");
 				panel3.Visible = false;
@@ -206,7 +210,7 @@ namespace LibraryApplication
 		{
 			try
 			{
-				conn.Open();
+			
 				SqlCommand cmd = conn.CreateCommand();
 				cmd.CommandType = CommandType.Text;
 				cmd.CommandText = "select * from books_info";
@@ -215,7 +219,7 @@ namespace LibraryApplication
 				SqlDataAdapter da = new SqlDataAdapter(cmd);
 				da.Fill(dt);
 				dataGridView1.DataSource = dt;
-				conn.Close();
+				
 			}
 			catch (Exception ex)
 			{

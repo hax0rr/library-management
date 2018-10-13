@@ -24,3 +24,4 @@ C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApp
 C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.view_books.resources
 C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.add_student_info.resources
 C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.view_student_info.resources
+C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.issue_books.resources

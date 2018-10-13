@@ -189,6 +189,7 @@
 			this.Controls.Add(this.textBox1);
 			this.Name = "add_books";
 			this.Text = "add_books";
+			this.Load += new System.EventHandler(this.add_books_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

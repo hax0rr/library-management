@@ -32,22 +32,22 @@
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.student_name = new System.Windows.Forms.TextBox();
-			this.student_enrollment_no = new System.Windows.Forms.TextBox();
-			this.student_dept = new System.Windows.Forms.TextBox();
-			this.student_sem = new System.Windows.Forms.TextBox();
-			this.student_contact = new System.Windows.Forms.TextBox();
-			this.student_email = new System.Windows.Forms.TextBox();
-			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
-			this.label5 = new System.Windows.Forms.Label();
-			this.label6 = new System.Windows.Forms.Label();
-			this.label7 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
+			this.label6 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.button2 = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
+			this.student_email = new System.Windows.Forms.TextBox();
+			this.student_contact = new System.Windows.Forms.TextBox();
+			this.student_sem = new System.Windows.Forms.TextBox();
+			this.student_dept = new System.Windows.Forms.TextBox();
+			this.student_enrollment_no = new System.Windows.Forms.TextBox();
+			this.student_name = new System.Windows.Forms.TextBox();
+			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
@@ -106,61 +106,68 @@
 			this.panel1.TabIndex = 3;
 			this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
 			// 
-			// student_name
+			// label8
 			// 
-			this.student_name.Location = new System.Drawing.Point(157, 37);
-			this.student_name.Name = "student_name";
-			this.student_name.Size = new System.Drawing.Size(100, 20);
-			this.student_name.TabIndex = 0;
+			this.label8.AutoSize = true;
+			this.label8.Location = new System.Drawing.Point(358, 137);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(75, 13);
+			this.label8.TabIndex = 13;
+			this.label8.Text = "Student Photo";
 			// 
-			// student_enrollment_no
+			// label7
 			// 
-			this.student_enrollment_no.Location = new System.Drawing.Point(157, 86);
-			this.student_enrollment_no.Name = "student_enrollment_no";
-			this.student_enrollment_no.Size = new System.Drawing.Size(100, 20);
-			this.student_enrollment_no.TabIndex = 1;
+			this.label7.AutoSize = true;
+			this.label7.Location = new System.Drawing.Point(639, 89);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(72, 13);
+			this.label7.TabIndex = 12;
+			this.label7.Text = "Student Email";
 			// 
-			// student_dept
+			// label6
 			// 
-			this.student_dept.Location = new System.Drawing.Point(443, 37);
-			this.student_dept.Name = "student_dept";
-			this.student_dept.Size = new System.Drawing.Size(100, 20);
-			this.student_dept.TabIndex = 2;
+			this.label6.AutoSize = true;
+			this.label6.Location = new System.Drawing.Point(639, 40);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(84, 13);
+			this.label6.TabIndex = 11;
+			this.label6.Text = "Student Contact";
 			// 
-			// student_sem
+			// label5
 			// 
-			this.student_sem.Location = new System.Drawing.Point(443, 87);
-			this.student_sem.Name = "student_sem";
-			this.student_sem.Size = new System.Drawing.Size(100, 20);
-			this.student_sem.TabIndex = 3;
+			this.label5.AutoSize = true;
+			this.label5.Location = new System.Drawing.Point(358, 90);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(68, 13);
+			this.label5.TabIndex = 10;
+			this.label5.Text = "Student Sem";
 			// 
-			// student_contact
+			// label4
 			// 
-			this.student_contact.Location = new System.Drawing.Point(750, 37);
-			this.student_contact.Name = "student_contact";
-			this.student_contact.Size = new System.Drawing.Size(100, 20);
-			this.student_contact.TabIndex = 4;
+			this.label4.AutoSize = true;
+			this.label4.Location = new System.Drawing.Point(358, 40);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(62, 13);
+			this.label4.TabIndex = 9;
+			this.label4.Text = "Department";
 			// 
-			// student_email
+			// label3
 			// 
-			this.student_email.Location = new System.Drawing.Point(750, 87);
-			this.student_email.Name = "student_email";
-			this.student_email.Size = new System.Drawing.Size(100, 20);
-			this.student_email.TabIndex = 5;
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(76, 90);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(73, 13);
+			this.label3.TabIndex = 8;
+			this.label3.Text = "Enrollment No";
 			// 
-			// openFileDialog1
+			// label2
 			// 
-			this.openFileDialog1.FileName = "openFileDialog1";
-			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(443, 132);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(100, 23);
-			this.button1.TabIndex = 4;
-			this.button1.Text = "select file";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(76, 40);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(75, 13);
+			this.label2.TabIndex = 7;
+			this.label2.Text = "Student Name";
 			// 
 			// button2
 			// 
@@ -173,68 +180,61 @@
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
-			// label2
+			// button1
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(76, 40);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(75, 13);
-			this.label2.TabIndex = 7;
-			this.label2.Text = "Student Name";
+			this.button1.Location = new System.Drawing.Point(443, 132);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(100, 23);
+			this.button1.TabIndex = 4;
+			this.button1.Text = "select file";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
-			// label3
+			// student_email
 			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(76, 90);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(73, 13);
-			this.label3.TabIndex = 8;
-			this.label3.Text = "Enrollment No";
+			this.student_email.Location = new System.Drawing.Point(750, 87);
+			this.student_email.Name = "student_email";
+			this.student_email.Size = new System.Drawing.Size(100, 20);
+			this.student_email.TabIndex = 5;
 			// 
-			// label4
+			// student_contact
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(358, 40);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(62, 13);
-			this.label4.TabIndex = 9;
-			this.label4.Text = "Department";
+			this.student_contact.Location = new System.Drawing.Point(750, 37);
+			this.student_contact.Name = "student_contact";
+			this.student_contact.Size = new System.Drawing.Size(100, 20);
+			this.student_contact.TabIndex = 4;
 			// 
-			// label5
+			// student_sem
 			// 
-			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(358, 90);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(68, 13);
-			this.label5.TabIndex = 10;
-			this.label5.Text = "Student Sem";
+			this.student_sem.Location = new System.Drawing.Point(443, 87);
+			this.student_sem.Name = "student_sem";
+			this.student_sem.Size = new System.Drawing.Size(100, 20);
+			this.student_sem.TabIndex = 3;
 			// 
-			// label6
+			// student_dept
 			// 
-			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(639, 40);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(84, 13);
-			this.label6.TabIndex = 11;
-			this.label6.Text = "Student Contact";
+			this.student_dept.Location = new System.Drawing.Point(443, 37);
+			this.student_dept.Name = "student_dept";
+			this.student_dept.Size = new System.Drawing.Size(100, 20);
+			this.student_dept.TabIndex = 2;
 			// 
-			// label7
+			// student_enrollment_no
 			// 
-			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(639, 89);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(72, 13);
-			this.label7.TabIndex = 12;
-			this.label7.Text = "Student Email";
+			this.student_enrollment_no.Location = new System.Drawing.Point(157, 86);
+			this.student_enrollment_no.Name = "student_enrollment_no";
+			this.student_enrollment_no.Size = new System.Drawing.Size(100, 20);
+			this.student_enrollment_no.TabIndex = 1;
 			// 
-			// label8
+			// student_name
 			// 
-			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(358, 137);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(75, 13);
-			this.label8.TabIndex = 13;
-			this.label8.Text = "Student Photo";
+			this.student_name.Location = new System.Drawing.Point(157, 37);
+			this.student_name.Name = "student_name";
+			this.student_name.Size = new System.Drawing.Size(100, 20);
+			this.student_name.TabIndex = 0;
+			// 
+			// openFileDialog1
+			// 
+			this.openFileDialog1.FileName = "openFileDialog1";
 			// 
 			// view_student_info
 			// 
