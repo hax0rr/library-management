@@ -45,7 +45,7 @@ namespace LibraryApplication
 					{
 						SqlCommand cmd = conn.CreateCommand();
 						cmd.CommandType = CommandType.Text;
-						cmd.CommandText = "insert into issue_books values('" + txt_enrollment.Text + "','" + label_student_name.Text + "','" + label_student_dept.Text + "','" + label_student_sem.Text + "','" + label_student_contact.Text + "','" + label_student_email.Text + "','" + txt_book_name.Text + "','" + issue_date.Value.ToString() + "')";
+						cmd.CommandText = "insert into issue_books values('" + txt_enrollment.Text + "','" + label_student_name.Text + "','" + label_student_dept.Text + "','" + label_student_sem.Text + "','" + label_student_contact.Text + "','" + label_student_email.Text + "','" + txt_book_name.Text + "','" + issue_date.Value.ToString() + "','')";
 						cmd.ExecuteNonQuery();
 
 						SqlCommand cmd1 = conn.CreateCommand();
@@ -54,6 +54,7 @@ namespace LibraryApplication
 						cmd1.ExecuteNonQuery();
 
 						MessageBox.Show("Books issued successfully!");
+						this.Close();
 					}
 					else
 					{

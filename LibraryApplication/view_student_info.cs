@@ -78,7 +78,7 @@ namespace LibraryApplication
 				dataGridView1.Refresh();
 				SqlCommand cmd = conn.CreateCommand();
 				cmd.CommandType = CommandType.Text;
-				cmd.CommandText = "select * from student_info where student_name like('%" + textBox1.Text + "%')";
+				cmd.CommandText = "select * from student_info where student_enrollment_no like('%" + textBox1.Text + "%')";
 				cmd.ExecuteNonQuery();
 				DataTable dt = new DataTable();
 				SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -200,6 +200,11 @@ namespace LibraryApplication
 			}
 			
 			
+		}
+
+		private void label1_Click(object sender, EventArgs e)
+		{
+
 		}
 
 		private void button1_Click(object sender, EventArgs e)

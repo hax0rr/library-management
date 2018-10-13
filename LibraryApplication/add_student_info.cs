@@ -17,7 +17,7 @@ namespace LibraryApplication
 	{
 		SqlConnection conn = new SqlConnection(@"Data Source=HAX0RR\SQLEXPRESS;Initial Catalog=library_management;Integrated Security=True;Pooling=False");
 		string pwd;
-		DialogResult result;
+		//DialogResult result;
 		string wanted_path;
 		public add_student_info()
 		{
@@ -64,11 +64,20 @@ namespace LibraryApplication
 					MessageBox.Show("Please insert a picture ");
 				}
 				else {
-					
-						String img_path;
-						File.Copy(openFileDialog1.FileName, wanted_path + "\\student_images\\" + pwd + ".jpg");
-						img_path = "student_images\\" + pwd + ".jpg";
+					int i;
+					String img_path;
+					File.Copy(openFileDialog1.FileName, wanted_path + "\\student_images\\" + pwd + ".jpg");
+					img_path = "student_images\\" + pwd + ".jpg";
 
+					SqlCommand cmd1 = conn.CreateCommand();
+					cmd1.CommandType = CommandType.Text;
+					cmd1.CommandText = "select * from student_info where student_enrollment_no='"+textBox3.Text +"'";
+					cmd1.ExecuteNonQuery();
+					DataTable dt1 = new DataTable();
+					SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
+					da1.Fill(dt1);
+					i = Convert.ToInt32(dt1.Rows.Count.ToString());
+					if (i == 0) {
 						SqlCommand cmd = conn.CreateCommand();
 						cmd.CommandType = CommandType.Text;
 						cmd.CommandText = "insert into student_info values('" + textBox1.Text + "','" + img_path.ToString() + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "')";
@@ -79,7 +88,13 @@ namespace LibraryApplication
 						//textBox1.Text = ""; textBox2.Text = ""; textBox3.Text = ""; textBox5.Text = ""; textBox6.Text = "";
 						MessageBox.Show("Student Record Added!!");
 						this.Close();
-					
+					}
+					else
+					{
+						MessageBox.Show("Student with this Enrollment No. already exists! ");
+					}
+
+
 				}
 				
 			}

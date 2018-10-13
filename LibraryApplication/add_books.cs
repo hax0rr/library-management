@@ -44,7 +44,7 @@ namespace LibraryApplication
 					else {
 						SqlCommand cmd = conn.CreateCommand();
 						cmd.CommandType = CommandType.Text;
-						cmd.CommandText = "insert into books_info values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + dateTimePicker1.Text + "'," + textBox5.Text + "," + textBox6.Text + "," + textBox6.Text + ")";
+						cmd.CommandText = "insert into books_info values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + dateTimePicker1.Value.ToString() + "'," + textBox5.Text + "," + textBox6.Text + "," + textBox6.Text + ")";
 						cmd.ExecuteNonQuery();
 
 						textBox1.Text = ""; textBox2.Text = ""; textBox3.Text = ""; textBox5.Text = ""; textBox6.Text = "";

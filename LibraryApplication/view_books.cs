@@ -189,22 +189,23 @@ namespace LibraryApplication
 		{
 			int i;
 			i = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
-			try
-			{
+			//try
+			//{
 				
 				SqlCommand cmd = conn.CreateCommand();
 				cmd.CommandType = CommandType.Text;
-				cmd.CommandText = "update books_info set book_name = '"+bookname.Text + "', book_author_name = '"+authorname.Text +"', book_publication_name='"+publicationname.Text +"', book_purchase_date='"+purchasedate.Value +"', book_price='"+bookprice.Text +"', book_quantity='"+bookquantity.Text +"' where id='"+i +"'";
+				MessageBox.Show(purchasedate.Value.ToString());
+				cmd.CommandText = "update books_info set book_name = '"+bookname.Text + "', book_author_name = '"+authorname.Text +"', book_publication_name='"+publicationname.Text +"', book_purchase_date='"+purchasedate.Value.ToString() +"', book_price='"+bookprice.Text +"', book_quantity='"+bookquantity.Text +"' where id='"+i +"'";
 				cmd.ExecuteNonQuery();
 				
 				disp_books();
 				MessageBox.Show("Book Details Updated Successfully!");
 				panel3.Visible = false;
-			}
-			catch(Exception ex)
-			{
-				MessageBox.Show(ex.Message);
-			}
+			//}
+			//catch(Exception ex)
+			//{
+			//	MessageBox.Show(ex.Message);
+			//}
 		}
 		public void disp_books()
 		{
