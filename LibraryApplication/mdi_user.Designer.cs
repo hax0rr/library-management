@@ -29,18 +29,20 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdi_user));
 			this.menuStrip = new System.Windows.Forms.MenuStrip();
 			this.booksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.addNewBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.viewBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.issueBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.returnBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.addStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.viewStudentInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.statusStrip = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-			this.returnBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.bookStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip.SuspendLayout();
 			this.statusStrip.SuspendLayout();
 			this.SuspendLayout();
@@ -52,7 +54,8 @@
             this.studentToolStripMenuItem});
 			this.menuStrip.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip.Name = "menuStrip";
-			this.menuStrip.Size = new System.Drawing.Size(632, 24);
+			this.menuStrip.Padding = new System.Windows.Forms.Padding(10, 3, 0, 3);
+			this.menuStrip.Size = new System.Drawing.Size(1053, 25);
 			this.menuStrip.TabIndex = 0;
 			this.menuStrip.Text = "MenuStrip";
 			// 
@@ -62,9 +65,10 @@
             this.addNewBooksToolStripMenuItem,
             this.viewBooksToolStripMenuItem,
             this.issueBooksToolStripMenuItem,
-            this.returnBooksToolStripMenuItem});
+            this.returnBooksToolStripMenuItem,
+            this.bookStockToolStripMenuItem});
 			this.booksToolStripMenuItem.Name = "booksToolStripMenuItem";
-			this.booksToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+			this.booksToolStripMenuItem.Size = new System.Drawing.Size(51, 19);
 			this.booksToolStripMenuItem.Text = "Books";
 			// 
 			// addNewBooksToolStripMenuItem
@@ -88,13 +92,20 @@
 			this.issueBooksToolStripMenuItem.Text = "Issue Books";
 			this.issueBooksToolStripMenuItem.Click += new System.EventHandler(this.issueBooksToolStripMenuItem_Click);
 			// 
+			// returnBooksToolStripMenuItem
+			// 
+			this.returnBooksToolStripMenuItem.Name = "returnBooksToolStripMenuItem";
+			this.returnBooksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.returnBooksToolStripMenuItem.Text = "Return Books";
+			this.returnBooksToolStripMenuItem.Click += new System.EventHandler(this.returnBooksToolStripMenuItem_Click);
+			// 
 			// studentToolStripMenuItem
 			// 
 			this.studentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addStudentToolStripMenuItem,
             this.viewStudentInfoToolStripMenuItem});
 			this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-			this.studentToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+			this.studentToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
 			this.studentToolStripMenuItem.Text = "Student";
 			// 
 			// addStudentToolStripMenuItem
@@ -115,9 +126,10 @@
 			// 
 			this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-			this.statusStrip.Location = new System.Drawing.Point(0, 431);
+			this.statusStrip.Location = new System.Drawing.Point(0, 675);
 			this.statusStrip.Name = "statusStrip";
-			this.statusStrip.Size = new System.Drawing.Size(632, 22);
+			this.statusStrip.Padding = new System.Windows.Forms.Padding(2, 0, 23, 0);
+			this.statusStrip.Size = new System.Drawing.Size(1053, 22);
 			this.statusStrip.TabIndex = 2;
 			this.statusStrip.Text = "StatusStrip";
 			// 
@@ -127,24 +139,29 @@
 			this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
 			this.toolStripStatusLabel.Text = "Status";
 			// 
-			// returnBooksToolStripMenuItem
+			// bookStockToolStripMenuItem
 			// 
-			this.returnBooksToolStripMenuItem.Name = "returnBooksToolStripMenuItem";
-			this.returnBooksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.returnBooksToolStripMenuItem.Text = "Return Books";
-			this.returnBooksToolStripMenuItem.Click += new System.EventHandler(this.returnBooksToolStripMenuItem_Click);
+			this.bookStockToolStripMenuItem.Name = "bookStockToolStripMenuItem";
+			this.bookStockToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.bookStockToolStripMenuItem.Text = "Book Stock";
+			this.bookStockToolStripMenuItem.Click += new System.EventHandler(this.bookStockToolStripMenuItem_Click);
 			// 
 			// mdi_user
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(632, 453);
+			this.BackColor = System.Drawing.SystemColors.Control;
+			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.ClientSize = new System.Drawing.Size(1053, 697);
 			this.Controls.Add(this.statusStrip);
 			this.Controls.Add(this.menuStrip);
+			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.IsMdiContainer = true;
 			this.MainMenuStrip = this.menuStrip;
+			this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.Name = "mdi_user";
-			this.Text = "mdi_user";
+			this.Text = "Library Management System";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.Load += new System.EventHandler(this.mdi_user_Load);
 			this.menuStrip.ResumeLayout(false);
@@ -170,6 +187,7 @@
 		private System.Windows.Forms.ToolStripMenuItem viewStudentInfoToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem issueBooksToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem returnBooksToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem bookStockToolStripMenuItem;
 	}
 }
 

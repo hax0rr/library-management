@@ -26,3 +26,4 @@ C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApp
 C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.view_student_info.resources
 C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.issue_books.resources
 C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.return_books.resources
+C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.books_record.resources
