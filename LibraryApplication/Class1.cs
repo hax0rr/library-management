@@ -10,7 +10,12 @@ using System.Web;
 public class Class1
 {
 	
-        public static string GetRandomPassword(int length)
+    public string testOfPassword()
+    {
+        return "A Test Password";
+    }
+        
+    public static string GetRandomPassword(int length)
         {
             char[] chars = "abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
             string password = string.Empty;

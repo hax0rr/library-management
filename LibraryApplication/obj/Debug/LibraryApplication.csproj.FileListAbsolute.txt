@@ -27,3 +27,21 @@ C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApp
 C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.issue_books.resources
 C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.return_books.resources
 C:\F I L E S\.NET lib\LibraryApplication\LibraryApplication\obj\Debug\LibraryApplication.books_record.resources
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryApplication\bin\Debug\LibraryApplication.exe.config
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryApplication\bin\Debug\LibraryApplication.exe
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryApplication\bin\Debug\LibraryApplication.pdb
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryApplication\obj\Debug\LibraryApplication.csprojAssemblyReference.cache
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryApplication\obj\Debug\LibraryApplication.add_books.resources
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryApplication\obj\Debug\LibraryApplication.add_student_info.resources
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryApplication\obj\Debug\LibraryApplication.books_record.resources
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryApplication\obj\Debug\LibraryApplication.issue_books.resources
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryApplication\obj\Debug\LibraryApplication.login.resources
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryApplication\obj\Debug\LibraryApplication.mdi_user.resources
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryApplication\obj\Debug\LibraryApplication.Properties.Resources.resources
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryApplication\obj\Debug\LibraryApplication.return_books.resources
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryApplication\obj\Debug\LibraryApplication.view_books.resources
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryApplication\obj\Debug\LibraryApplication.view_student_info.resources
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryApplication\obj\Debug\LibraryApplication.csproj.GenerateResource.cache
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryApplication\obj\Debug\LibraryApplication.csproj.CoreCompileInputs.cache
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryApplication\obj\Debug\LibraryApplication.exe
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryApplication\obj\Debug\LibraryApplication.pdb
