@@ -1,0 +1,17 @@
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryAppTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryAppTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryAppTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryAppTest\bin\Debug\LibraryAppTest.dll
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryAppTest\bin\Debug\LibraryAppTest.pdb
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryAppTest\bin\Debug\LibraryApplication.exe
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryAppTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryAppTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryAppTest\bin\Debug\LibraryApplication.pdb
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryAppTest\bin\Debug\LibraryApplication.exe.config
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryAppTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryAppTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryAppTest\obj\Debug\LibraryAppTest.csprojAssemblyReference.cache
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryAppTest\obj\Debug\LibraryAppTest.csproj.CoreCompileInputs.cache
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryAppTest\obj\Debug\LibraryAppTest.csproj.CopyComplete
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryAppTest\obj\Debug\LibraryAppTest.dll
+E:\Academic\Projects\TestProject\3-2\library-management\LibraryAppTest\obj\Debug\LibraryAppTest.pdb
